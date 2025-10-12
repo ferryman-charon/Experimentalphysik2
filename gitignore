@@ -1,5 +1,4 @@
 .venv/
 .env
-.directory/
 .directory
 __pycache__
