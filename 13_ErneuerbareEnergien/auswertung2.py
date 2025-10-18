@@ -31,7 +31,7 @@ U_sorted = np.array(U_leer)[sorted_indices]
 dd = 0.1
 dU_leer = uncert(U_leer)
 
-fig, ax = plt.subplots(1,1, figsize=(7, 4))
+fig, ax = plt.subplots(1,1, figsize=(6, 4))
 
 ax.errorbar(x=d[:-1], y=U_leer[:-1], yerr=dU_leer[:-1], fmt='+', color='blue', 
                 capsize=5, label=r'Messdaten')
@@ -44,7 +44,6 @@ ax.set_ylabel(r'Spannung $U_\text{leer}$ / V', fontsize=16)
 
 ax.grid(True)
 ax.set_xlabel(r'Abstand $d$ / cm', fontsize=16)
-ax.legend(frameon=True, fontsize=16)
 
 plt.tight_layout()
 plt.show()
