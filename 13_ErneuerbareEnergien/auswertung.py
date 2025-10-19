@@ -53,7 +53,7 @@ for i, measure in enumerate(measures):
     fit_param = np.sqrt(np.diag(pcov))
 
     axs[0].scatter(t,y, marker='+', color=colors[i], label=f'Messung {i}')
-    axs[0].set_ylabel(r'Spannung $U_C$ / V', fontsize=19)
+    axs[0].set_ylabel(r'Spannung $U_C$ / V', fontsize=18.5)
     axs[0].axvspan(
     tmin, tmax,
         color='grey',       # or a custom muted tone
@@ -66,8 +66,8 @@ for i, measure in enumerate(measures):
     axs[1].plot(t_fit, y_fit, color=fit_colors[i], label='Ausgleichskurve')
     axs[1].grid(True)
 
-    axs[0].set_xlabel(r'Zeit $t$ / s', fontsize=19)
-    axs[1].set_xlabel(r'Zeit $t$ / s', fontsize=19)
+    axs[0].set_xlabel(r'Zeit $t$ / s', fontsize=18.5)
+    axs[1].set_xlabel(r'Zeit $t$ / s', fontsize=18.5)
     plt.tight_layout()
     tau = 1/popt[1]
     dtau = fit_param[1]/(popt[1]**2)
